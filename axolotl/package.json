@@ -1,0 +1,50 @@
+{
+  "name": "axolotl_2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build:client": "webpack --mode production",
+    "build:server": "tsc -p tsconfig.server.json",
+    "build": "npm run build:client && npm run build:server",
+    "start": "node dist/server.js",
+    "dev:client": "webpack serve --mode development --https --host 0.0.0.0",
+    "dev:server": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "dev": "concurrently \"npm run dev:client\" \"npm run dev:server\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.1",
+    "socket.io": "^4.8.0",
+    "socket.io-client": "^4.8.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.7.9",
+    "@types/socket.io": "^3.0.1",
+    "@types/socket.io-client": "^3.0.0",
+    "@types/webpack-dev-server": "^4.7.1",
+    "browserify-zlib": "^0.2.0",
+    "concurrently": "^8.2.2",
+    "copy-webpack-plugin": "^12.0.2",
+    "crypto-browserify": "^3.12.1",
+    "html-webpack-plugin": "^5.6.3",
+    "path-browserify": "^1.0.1",
+    "process": "^0.11.10",
+    "querystring-es3": "^0.2.1",
+    "raw-loader": "^4.0.2",
+    "stream-browserify": "^3.0.0",
+    "stream-http": "^3.2.0",
+    "timers-browserify": "^2.0.12",
+    "ts-loader": "^9.5.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.6.3",
+    "url": "^0.11.4",
+    "webpack": "^5.95.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0",
+    "worker-loader": "^3.0.8"
+  }
+}
